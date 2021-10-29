@@ -14,5 +14,9 @@ public class ScoreManager : MonoBehaviour
         {
             scoreText.text = "Score : " + Mathf.Round(Collectibles.score);
         }
+        else
+        {
+            Destroy(scoreText);
+        }
     }
 }

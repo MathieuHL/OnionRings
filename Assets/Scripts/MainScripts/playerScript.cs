@@ -5,12 +5,18 @@ using UnityEngine;
 public class playerScript : MonoBehaviour
 {
     public float playerSpeed;
+    private float playerPosition;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position.y;
     }
 
     void FixedUpdate()
@@ -25,11 +31,11 @@ public class playerScript : MonoBehaviour
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if(mousePos.y > 0.01)
+            if(mousePos.y > playerPosition - 0.5)
             {
                 rb.velocity = new Vector2(0, playerSpeed);
             }
-            else if(mousePos.y < -0.01)
+            else if(mousePos.y < playerPosition - 1)
             {
                 rb.velocity = new Vector2(0, -playerSpeed);
             }

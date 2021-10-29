@@ -14,14 +14,6 @@ public class Collectibles : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void Update()
-    {
-        if(GameObject.FindGameObjectWithTag("Player") == null)
-        {
-            score = 0.0f;
-        }
-    }
-
     // Destroy brocolis if hit object with Border tag
     private void OnTriggerEnter2D(Collider2D collision)
     {
