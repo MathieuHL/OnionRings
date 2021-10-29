@@ -21,7 +21,7 @@ public class HighScoreScript : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Player") == null)
         {
-            score = Mathf.Round(Collectibles.score);
+            score = Mathf.Round(CollectiblesScript.score);
             
             if (score > highScore)
             {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOver : MonoBehaviour
+public class GameOverScript : MonoBehaviour
 {
     public GameObject gameOverPanel;
 
@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Collectibles.score = 0.0f;
+        CollectiblesScript.score = 0.0f;
     }
 
     public void Exit()

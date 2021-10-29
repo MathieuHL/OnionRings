@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManagerScript : MonoBehaviour
 {
     public Text scoreText;
 
@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(GameObject.FindGameObjectWithTag("Player") != null)
         {
-            scoreText.text = "Score : " + Mathf.Round(Collectibles.score);
+            scoreText.text = "Score : " + Mathf.Round(CollectiblesScript.score);
         }
         else
         {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoopingBackground : MonoBehaviour
+public class LoopingBackgroundScript : MonoBehaviour
 {
     public float bgSpeed;
     public Renderer backgroundRenderer;

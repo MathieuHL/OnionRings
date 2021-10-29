@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Ennemies : MonoBehaviour
+public class CollectiblesScript : MonoBehaviour
 {
     private GameObject player;
+    public static float score;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,8 @@ public class Ennemies : MonoBehaviour
         }
         else if(collision.tag == "Player")
         {
-            Destroy(player.gameObject);
+            Destroy(this.gameObject);
+            score += 1 + 5 * Time.deltaTime;
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObjects : MonoBehaviour
+public class SpawnObjectsScript : MonoBehaviour
 {
     public List<GameObject> triggerObjects;
     public float maxX, minX, maxY, minY, timeBetweenSpawn;
@@ -26,7 +26,7 @@ public class SpawnObjects : MonoBehaviour
         float randomY = Random.Range(minY, maxY);
         int randomNb = Random.Range(0, 10);
 
-        if(randomNb <= 7)
+        if(randomNb < 7)
         {
             objRef = 0;
         }

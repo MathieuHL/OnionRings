@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundMusic : MonoBehaviour
+public class BackgroundMusicScript : MonoBehaviour
 {
-    private static BackgroundMusic backgroundMusic;
+    private static BackgroundMusicScript backgroundMusic;
 
     private void Awake()
     {
